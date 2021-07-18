@@ -1,8 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap");
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "rowdies", cursive;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+h2 {
+    font-size: 2em;
+    color: yellow;
+}
+
+h3 {
+    font-weight: normal;
 }
 
 .container {
@@ -12,43 +27,45 @@
 
 .grid {
     /* border: solid 2px black; */
-    max-width: 420px;
+    max-width: 380px;
     width: 80%;
-    aspect-ratio: 1/1;
+    /* aspect-ratio: 1/1; */
     margin: 1em auto;
     display: flex;
     flex-wrap: wrap;
-    background-color: white;
+    background-color: black;
 }
 
 .grid div {
-    width: 3.57142857%;
-    height: 3.57142857%;
+    width: 5.26315789%;
+    aspect-ratio: 1/1;
 }
 
 .pac-dot {
-    background-color: rgb(0, 177, 0);
-    border: 5px solid white;
+    background-color: rgb(160, 160, 160);
+    border: 8px solid black;
     box-sizing: border-box;
     border-radius: 50%;
 }
 
 .wall {
-    background-color: rgba(0, 8, 255, 0.863);
+    background-color: rgb(4, 0, 255);
 }
 
 .power-pellet {
     background-color: rgb(0, 255, 0);
+    border: 5px solid black;
     border-radius: 50%;
 }
 
 .pacman {
-    background-color: rgb(250, 204, 0);
+    background: yellow;
+    border: 2px solid black;
     border-radius: 50%;
-    border: none;
 }
 
 .ghost {
+    clip-path: polygon( 50% 0%, 80% 10%, 100% 35%, 100% 100%, 50% 75%, 0 100%, 0% 35%, 20% 10%);
     border: none;
     border-radius: 50% 50% 0 0;
 }
@@ -58,54 +75,25 @@
 }
 
 .pinky {
-    background-color: rgb(255, 70, 101);
+    background-color: rgb(255, 124, 146);
 }
 
 .inky {
-    background-color: orangered;
+    background-color: chartreuse;
 }
 
 .clyde {
-    background-color: rgb(18, 212, 0);
+    background-color: sandybrown;
 }
 
 .scared-ghost {
     background-color: brown;
 }
 
-.up,
-.down,
-.left,
-.right {
-    cursor: pointer;
-}
-
-.controls {
-    font-size: 2rem;
-    max-width: 200px;
-    margin: 1em auto;
-    display: grid;
-    grid-template-columns: repeat(3 1fr);
-    grid-template-rows: repeat(2, 50px);
-    column-gap: 10px;
-    row-gap: 10px;
-}
-
-.up {
-    grid-column: 2/3;
-    grid-row: 1/2;
-}
-
-.down,
-.left,
-.right {
-    grid-row: 2/3;
-}
-
 @media screen and (max-width: 400px) {
     .pac-dot {
-        background-color: rgb(0, 177, 0);
-        border: 3px solid white;
+        background-color: rgb(160, 160, 160);
+        border: 5px solid black;
         box-sizing: border-box;
         border-radius: 50%;
     }
