@@ -68,7 +68,7 @@ let pacmanCurrentIndex = 351
 squares[pacmanCurrentIndex].classList.add('pacman')
 
 // function for moving the pacman--------------------------
-let timerId = setInterval(move, 250)
+let timerId = setInterval(move, 300)
 
 function move() {
     if (!((pacmanCurrentIndex + width >= width * height && direction === width) || //if pac-man has hit bottom
